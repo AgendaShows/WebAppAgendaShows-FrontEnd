@@ -1,0 +1,33 @@
+.container-titulo {
+    color: #76d0d4;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.container-form {
+    margin-top: 40px;
+    width: 48%;
+    padding-top: 10px;
+    padding-left: 180px;
+    text-align: center;
+
+    .registro {
+        margin-top: 15px;
+        .texto {
+            color: #fff;
+        }
+    }
+}
+
+.container-redes {
+    margin-top: 50px;
+    width: 48%;
+    padding-right: 180px;
+    padding-top: 10px;
+    text-align: center;
+
+    .btn-twitter, .btn-google {
+        margin-top: 10px;
+    }
+}
