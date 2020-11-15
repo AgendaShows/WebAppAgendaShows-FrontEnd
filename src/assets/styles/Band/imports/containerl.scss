@@ -1,0 +1,70 @@
+.left-container {
+    border: 1px solid #000; //* Estilo temporal
+    margin: 20px 60px;
+
+    .band-name {
+        margin: 15px 0;
+        padding: 10px 10px;
+
+        .band-image {
+            img {
+                object-fit: cover;
+                border-radius: 50%; //* Estilo temporal
+                margin-left: 20px;
+            }
+        }
+
+        .band-title {
+            color: #000;
+            padding: 35px 0px 15px 70px;
+            text-align: center;
+
+            h2, h4 {
+               letter-spacing: 2px;
+               font-size: 30px; 
+            }
+        }
+    }
+
+    .video-preview {
+        margin: 10px 0;
+    }
+
+    .social-links {
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        
+        a {
+            color: #000;
+            text-align: center;
+            width: 100px;
+            display: block;
+            padding: 15px 0;
+            border-radius: 3px;
+            font-size: 30px;
+            margin: 0 20px;
+        }
+
+        .twitter {
+            &:hover{
+                background: #1da1f2;
+            }
+        }
+        .youtube {
+            &:hover{
+                background: #ff0000;
+            }
+        }
+        .instagram {
+            &:hover{
+                background: #f77737;
+            }
+        }
+        .spotify {
+            &:hover{
+                background: #1db954;
+            }
+        }
+    }
+}

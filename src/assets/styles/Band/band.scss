@@ -1,0 +1,11 @@
+//* Imports 
+@import './imports/containerl.scss';
+@import './imports/containerd.scss';
+@import './imports/media.scss';
+
+//* Diseño General
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

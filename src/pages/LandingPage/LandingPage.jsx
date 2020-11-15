@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-} from "react-router-dom";
 
 //* Styles
 import '../../assets/styles/Landing/landing.scss';
@@ -15,22 +12,20 @@ import SocialLogin from './components/SocialLogin';
 function LandingPage () {
     
     return (
-        <Router>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-12">
-                        <Titulo />
-                    </div>
-                    <div className="col-12 col-lg-6 container-form">
-                        <Form />
-                        <div className="col-12">
-                            <ButtonRegistro />
-                        </div>
-                    </div>
-                    <SocialLogin />
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-12">
+                    <Titulo />
                 </div>
+                <div className="col-12 col-lg-6 container-form">
+                    <Form />
+                    <div className="col-12">
+                        <ButtonRegistro />
+                    </div>
+                </div>
+                <SocialLogin />
             </div>
-        </Router>
+        </div>
     )       
 };
 

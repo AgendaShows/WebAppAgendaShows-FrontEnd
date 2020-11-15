@@ -1,10 +1,15 @@
 @media only screen and (max-width: 900px) {
     body {
         background-position: center center;
-        background-size: auto;
+        background-size: cover;
     }
 
     h1 {
       font-size: 50px;
+    }
+
+    .form-container {
+      margin-left: -30.66666%;
+      margin-right: 22.6666%;
     }
 }

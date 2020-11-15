@@ -1,0 +1,41 @@
+.right-container {
+    border: 1px solid #000; //* Estilo temporal
+    margin: 20px 30px;
+
+    .search-container {
+
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px auto;
+            padding: 15px;
+
+            .subtitle, .watch-icon {
+                font-size: 28px;
+            }
+        }
+
+        .dates-cards {
+            border: 1px #000 solid; //* Estilo temporal
+            display: flex;
+            font-size: 20px;
+            margin: 10px auto;
+            padding: 10px;
+            justify-content: space-around;
+
+            .stadium {
+                display: inline-block;
+                margin-left: 95px;
+            }
+
+            .calendar {
+                font-size: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .carousel {
+        margin: 30px auto;
+    }
+}

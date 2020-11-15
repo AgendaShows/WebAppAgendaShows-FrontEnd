@@ -7,7 +7,7 @@ function ButtonRegistro () {
         <div className="registro">
             <span className="texto">¿No sos usuario? ¡Registrate!</span>
             <br/>
-            <Link to=""><button type="click" id="boton-registrate" className="btn btn-success">Registrate</button></Link>
+            <Link to="/registro" className="btn btn-success">Registrate</Link>
         </div>
     )
 };

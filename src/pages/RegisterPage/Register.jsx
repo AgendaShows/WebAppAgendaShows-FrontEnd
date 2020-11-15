@@ -1,10 +1,10 @@
 import React from 'react';
 
-//* Estilos
+//* Styles
 import '../../assets/styles/Register/register.scss';
 
-//* Componentes
-import Titulo from '../LandingPage/components/Titulo';
+//* Components
+import Titulo from './components/Titulo';
 import Form from './components/Form';
 
 
@@ -15,7 +15,7 @@ function Register() {
                 <div className="col-12">
                     <Titulo />
                 </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div className="col-12 offset-3 col-lg-6">
                     <Form /> 
                 </div>
             </div>

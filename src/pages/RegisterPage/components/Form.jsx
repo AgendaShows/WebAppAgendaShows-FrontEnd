@@ -3,7 +3,7 @@ import React from 'react';
 function Form() {
 
     return (
-        <div className="container-form">
+        <div className="form-container">
             <form>
                 <div class="form-group">
                     <label for="text" class="etiqueta">Nombre</label>

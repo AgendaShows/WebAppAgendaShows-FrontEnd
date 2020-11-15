@@ -1,0 +1,36 @@
+@media only screen and (max-width: 960px) {
+
+    .left-container {
+        margin: 20px auto;
+
+        .band-name {
+            margin: 5px;
+
+            .band-image {
+                margin-left: 50px;
+            }
+
+            .band-title {
+                h2,h4 {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .video-preview {
+            margin: 5px auto;
+            iframe {
+                width: 350px;
+                height: 300px;
+            }
+        }
+
+        .social-links {
+            margin: 20px auto;
+        }
+    }
+
+    .right-container {
+        margin: 20px auto;
+    }
+}
