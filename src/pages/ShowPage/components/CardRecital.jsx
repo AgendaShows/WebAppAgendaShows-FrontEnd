@@ -1,9 +1,9 @@
 import React from 'react';
-
+import ImgRecital from './Metallica.jpg'
 function CardRecital() {
     return (
         <div className="contenedorImagen">
-            {/* <img src="img/Metallica.jpg"></img> */}
+           <img src={ImgRecital} alt="FotoRecital"/>
         </div>
     )
 }

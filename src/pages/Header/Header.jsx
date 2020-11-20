@@ -12,7 +12,7 @@ import Form from './components/Form';
 function Header() {
     return (
         <header>
-            <nav className="navbar navbar-nav navbar-expand-xl navbar-dark bg-dark sticky-top">
+            <nav className="navbar navbar-nav navbar-expand-xl sticky-top">
                 <Title />
                 <Button />
                 <div className="navbar-collapse collapse" id="barraDeNavegacion">

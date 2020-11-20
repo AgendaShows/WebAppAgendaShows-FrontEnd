@@ -1,0 +1,174 @@
+.sidebar {
+    background-color:#1a1c20; 
+    text-align: center;
+    width: 280px;
+    height: auto;
+    padding-top: 10px;
+
+    a {
+    list-style: none;
+    text-decoration: none;
+    }
+    ul {    
+        li{
+        font-size: 100;
+        color: white;
+        list-style-type: none;
+        margin: 5px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        &:hover {
+            border-bottom: 2px solid #ffffff;
+            }  
+        }
+    }
+    .fotoPerfil {
+        height: 170px;
+        width: 170px;
+        border-radius: 100%;
+    }
+    ul{
+        margin-top: 15px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .dropdown {
+        display: none;
+    }
+    .map{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height:204px;
+        width: 128px;
+    }
+}
+
+.FechasButtons {
+    margin-top: 10px;
+    margin: 10px 0px 10px 50px;
+
+    .mainList{
+        display: flex;
+        justify-content: center;
+        li {
+            display: inline-block;
+            list-style: none;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 30px;
+            padding: 10px 45px;
+            border-radius: 10%;
+            &:hover{
+                background: #343a40;
+                color: #fff;
+            }
+        }
+    }
+
+    .band-card{
+        background: rgb(26,28,32);
+        background: linear-gradient(270deg, rgba(26,28,32,1) 24%, rgba(38,41,47,1) 60%, rgba(74,79,88,1) 81%, rgba(71,75,79,1) 90%);
+        margin: 20px 0;
+        border-radius: 25px;
+        padding-left: 0%;
+
+        .cardsProfile{
+            width: fit-content;
+            text-align: center;
+            background-color: #165f87;
+            background-image: linear-gradient(135deg, #165f87 14%, #1a3c52 34%, #161b26 68%, #151518 84%);
+            color: white;
+            padding: 20px;
+            border-top: 2px solid #000000;
+            border-left: 2px solid #000000; 
+            border-bottom: 2px solid #000000;
+            h4{
+                font-size: 1.3rem;
+            }
+
+            .fotoBanda{
+                border-radius: 100%;
+            }
+        }
+
+        .cardsRecitales{
+            padding: 20px;
+            border-top: 2px solid #000000;
+            border-right: 2px solid #000000; 
+            border-bottom: 2px solid #000000;
+            border-bottom-right-radius: 25px;
+            border-top-right-radius: 25px;
+            
+            textarea {
+                width: 300px;
+                min-height: 120px;
+                max-height: 120px;
+                border-radius: 10px;
+                .descripcion{
+                    width: 290px;  
+                }
+            }
+            .buttonCards {
+                margin-top: 10px;
+                .buttonMas{
+                    width: fit-content;
+                }
+            }
+        }
+    }    
+}
+
+.aside{
+    margin: 10px 6px 10px 25px;
+
+    .asideTitle{
+        display: flex;
+        justify-content: space-around;
+        font-size: 25px;
+        align-items: center;
+        margin: 15px 0px 25px 0px;
+        i{
+            color:white;
+        }
+
+        .sectionTitle{
+            color: #ffffff;
+            text-align: center;
+        }
+    }
+    .bands{
+        background-color: #165f87;
+        background-image: linear-gradient(135deg, #165f87 14%, #1a3c52 34%, #161b26 68%, #151518 84%);
+        border: 2px solid black; 
+        border-radius: 5%;
+        margin: 10px 0px;
+        padding: 20px 0px;
+        text-align: center;
+        color:white;
+
+        .imagen{
+            border-radius: 100%;
+        }
+        .bigCard{
+            img {
+                margin-left: 20px;
+            }
+            span{
+                display: inline-block;
+                font-size: 20px;
+                margin-left: 70px;
+            }
+            // i{
+            //     margin-left: 10px;
+            //     float: right;
+            //     font-size: 30px;
+            // }
+            h6{
+                margin: 10px 0px;
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,56 @@
+@media only screen and (max-width: 960px) { 
+    /* Main */
+    .sidebar {
+        ul {
+            display: none;
+        }
+        .dropdown {
+            margin: 20px auto;
+            display: block;
+        }
+        .map {
+            display: none;
+        }
+    }
+
+    .mainList {
+        a {
+            color: #000;
+            margin: 0 10px;
+            border: 2px solid #000;
+            padding: 10px 30px;
+            border-radius: 10%;
+            &:hover{
+                background: #343a40;
+                color: #fff;
+            }
+        }
+    } 
+
+    .FechasButtons, .bandCard, .cardsRecitales{
+        margin: 0px 5px;
+    }
+    
+    .FechasButtons, .aside {
+        margin: 10px 0px 10px 0px;
+    }
+
+    /* Aside */
+    .aside {
+        .bigCard {
+            span { 
+               margin-left: 50px;
+            }
+        }
+        .bands {
+            img {
+                display: block;
+                margin: auto;
+            }
+
+            i {
+                margin-right: 30px;
+            }
+        }
+    } 
+}

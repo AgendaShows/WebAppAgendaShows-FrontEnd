@@ -1,0 +1,16 @@
+//* Imports
+@import './imports/body.scss';
+@import './imports/media.scss';
+
+//*Diseño General
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    clear: both;
+}
+body{
+    background-color: #165f87;
+    background-image: linear-gradient(315deg, #165f87 14%, #1a3c52 34%, #161b26 68%, #151518 84%);
+}
