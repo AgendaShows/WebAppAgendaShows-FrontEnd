@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './bandLogo.jpg';
-function BandCard(){
+
+function RecitalCard () {
+
     return(
         <div className="row">
             <div className="col-12 col-lg-4 cardsProfile">
@@ -12,7 +15,7 @@ function BandCard(){
                 <textarea name="descripcion" className="descripcion" placeholder="Descripcion"></textarea>
                 <div className="row">
                     <div className="col-12 buttonCards">
-                        <button type="button" className="btn btn-outline-warning btn-block">VER MÁS</button>
+                        <Link to="" className="btn btn-outline-warning btn-block">VER MÁS</Link>
                     </div>
                 </div>
             </div>   
@@ -20,8 +23,4 @@ function BandCard(){
     )
 };
 
-export default BandCard;
-
-{/* <div className="col-12 col-lg-4 cardsProfile">
-<div className="col-12 col-lg-8 cardsRecitales"> */}
-{/* <div className="col-4 buttonCards"> */}
+export default RecitalCard;

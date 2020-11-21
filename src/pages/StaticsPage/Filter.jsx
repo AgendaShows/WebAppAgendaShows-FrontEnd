@@ -1,5 +1,5 @@
 import React from 'react';
-import Tool from './image/Screw.png';
+import Tool from './image/Screw2.png';
 
 //* Styles
 import '../../assets/styles/Statics/static.scss';

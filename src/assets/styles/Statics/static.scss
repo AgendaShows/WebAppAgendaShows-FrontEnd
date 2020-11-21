@@ -5,10 +5,6 @@
     padding: 0px;
 }
 
-body {
-    background-color: #e4e4e4;
-}
-
 .tool-container {
     .center-block {
         margin: 40px 0 0 500px;
@@ -23,6 +19,7 @@ body {
         padding: 53px;
         margin-top: 10px;
         i {
+            color: #fff;
             text-align: center;
             font-size: 40px;
             text-shadow: 
@@ -36,6 +33,7 @@ body {
         }
         .text {
             text-align: center;
+            color: #fff;
             font-size: 35px;
         }
     }

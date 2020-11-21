@@ -7,8 +7,9 @@ import {
 
 //* Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'popper.js'
 import 'jquery';
-import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 //* Components
 import LandingPage from './pages/LandingPage/LandingPage';
@@ -23,25 +24,25 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/recomendados">
+          <Route exact path="/recomendados">
             <Recomended />
           </Route>
-          <Route path="/filtros">
+          <Route exact path="/filtros">
             <Filter />
           </Route>
-          <Route path="/firsttoeleven">
+          <Route exact path="/firsttoeleven">
             <BandPage />
           </Route>
-          <Route path="/publico">
+          <Route exact path="/publico">
             <HomePage />
           </Route>
-          <Route path="/home">
+          <Route exact path="/inicio">
             <HomePage />
           </Route>
-          <Route path="/registro">
+          <Route exact path="/registro">
             <RegisterPage />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <LandingPage />
           </Route>
         </Switch>

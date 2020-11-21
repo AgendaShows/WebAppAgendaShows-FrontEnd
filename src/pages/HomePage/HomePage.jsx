@@ -1,22 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 
 //*Styles
 import "../../assets/styles/Home/home.scss";
+import Footer from "../Footer/Footer";
 
 //* Components
 import Header from "../Header/Header";
-import BandCard from "./components/BandCard";
+import RecitalCard from "./components/RecitalCard";
 import BannerDestacados from "./components/BannerDestacados";
 import BigCard from "./components/BigCard";
 import FechasButtons from "./components/FechasButtons";
 import SideBar from "./components/SideBar";
 import SmallCard from "./components/SmallCard";
-import Footer from "../Footer/Footer";
 
 function HomePage() {
   return (
-    <Router>
+    <>
       <Header />
       <section>
         <div className="container-fluid">
@@ -27,13 +26,13 @@ function HomePage() {
             <div className="col-12 col-lg-5 FechasButtons">
               <FechasButtons />
               <div className="col-12 band-card">
-                <BandCard />
+                <RecitalCard />
               </div>
               <div className="col-12 band-card">
-                <BandCard />
+                <RecitalCard />
               </div>
               <div className="col-12 band-card">
-                <BandCard />
+                <RecitalCard />
               </div>
             </div>
             <div className="col-12 col-lg-4 aside">
@@ -62,7 +61,7 @@ function HomePage() {
         </div>
       </section>
       <Footer />
-    </Router>
+    </>
   );
 }
 

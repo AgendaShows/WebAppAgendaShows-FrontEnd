@@ -12,7 +12,7 @@ import SocialLogin from './components/SocialLogin';
 function LandingPage () {
     
     return (
-        <div className="container-fluid">
+        <div className="container-fluid fondo-recital">
             <div className="row">
                 <div className="col-12">
                     <Titulo />

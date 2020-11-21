@@ -6,7 +6,7 @@ function SearchBar() {
         <div>
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0 lista">
                 <li class="nav-item">
-                    <Link class="btn btn-outline-light" to="/home">Inicio</Link>
+                    <Link class="btn btn-outline-light" to="/inicio">Inicio</Link>
                 </li>
                 <li class="nav-item">
                     <Link class="btn btn-outline-light" to="/firsttoeleven">Artistas</Link>
