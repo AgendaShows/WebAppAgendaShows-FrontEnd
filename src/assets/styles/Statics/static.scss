@@ -1,0 +1,66 @@
+//* Diseño General torni
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #e4e4e4;
+}
+
+.tool-container {
+    .center-block {
+        margin: 40px 0 0 500px;
+        img {
+            animation: myfx 2s linear infinite;
+        }
+    }
+
+    .ad {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 53px;
+        margin-top: 10px;
+        i {
+            text-align: center;
+            font-size: 40px;
+            text-shadow: 
+            0px 0px 10px #fff,
+            4px 2px 12px #dcb500,
+            -4px 2px 12px #dcb500,
+            0px -6px 14px #ff7a00,
+            0px -12px 14px #ff6300,
+            0px -20px 14px #ff4400,
+            0px -30px 14px #0a7bff;
+        }
+        .text {
+            text-align: center;
+            font-size: 35px;
+        }
+    }
+}
+
+@keyframes myfx {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .tool-container {
+        .center-block {
+            margin: 10px 0 0 45px;
+        }
+
+        .ad {
+            padding: 45px;
+            i {
+                font-size: 30px;
+            }
+            .text {
+                font-size: 30px;
+            }
+        }
+    }
+}

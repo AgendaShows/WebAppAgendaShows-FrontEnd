@@ -1,5 +1,4 @@
 .right-container {
-    border: 1px solid #000; //* Estilo temporal
     margin: 20px 30px;
 
     .search-container {
@@ -12,11 +11,13 @@
 
             .subtitle, .watch-icon {
                 font-size: 28px;
+                color: #fff;
             }
         }
 
         .dates-cards {
             border: 1px #000 solid; //* Estilo temporal
+            color: #fff;
             display: flex;
             font-size: 20px;
             margin: 10px auto;

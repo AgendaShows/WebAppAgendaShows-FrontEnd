@@ -1,20 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Link, Redirect} from 'react-router-dom';
+import {loginUserApi} from '../../../services/userService';
 
 function Form() {
 
+    const [userCredentials, setState] = useState({
+        email: '',
+        password: ''
+    });
+
+    const [isLogged, setIsLogged] = useState(false);
+
+    const handleInputChange = (e) => {
+        const {name, value} = e.target
+        setState(prevState => ({
+            ...prevState,
+            [name] : value
+        }));
+    }
+
+    const handleClick = async (e) => {
+        e.preventDefault();
+
+        await loginUserApi(userCredentials);
+        setIsLogged(true);
+    }
+
     return (
-        <form action="/user/login" method="POST" id="form"> 
-            <div className="form-group">
-                <label for="email" className="etiqueta">E-Mail</label>
-                <input type="emai" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu Email" required/>
-            </div>
-            <div className="form-group">
-                <label for="password" className="etiqueta">Contraseña</label>
-                <input type="password" className="form-control" id="password" placeholder="Contraseña" required/>
-            </div>
-            <br/>
-            <button type="submit" id="boton-inicia" className="btn btn-primary">Inicia Sesion</button>
-        </form>
+        <>
+            {isLogged && <Redirect to="/inicio" />}
+            <form id="form"> 
+                <div className="form-group">
+                    <label htmlFor="email" className="etiqueta">E-Mail</label>
+                    <input type="emai" 
+                        name="email" 
+                        className="form-control" 
+                        aria-describedby="emailHelp" 
+                        placeholder="Ingresa tu Email"
+                        value={userCredentials.email}
+                        onChange={handleInputChange} required/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password" className="etiqueta">Contraseña</label>
+                    <input type="password" 
+                        name="password" 
+                        className="form-control" 
+                        placeholder="Contraseña"
+                        value={userCredentials.password}
+                        onChange={handleInputChange} required/>
+                </div>
+                <br/>
+                <Link to=""
+                    type="submit" 
+                    className="btn btn-primary"
+                    onClick={handleClick}>Inicia Sesion</Link>
+                <Link to="/publico" 
+                    type="submit"
+                    className="btn btn-success no-login-btn">Iniciar sin Registrarse</Link>
+            </form>
+        </>
     )
 };
 

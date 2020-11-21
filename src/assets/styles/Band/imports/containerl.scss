@@ -1,5 +1,4 @@
 .left-container {
-    border: 1px solid #000; //* Estilo temporal
     margin: 20px 60px;
 
     .band-name {
@@ -9,13 +8,13 @@
         .band-image {
             img {
                 object-fit: cover;
-                border-radius: 50%; //* Estilo temporal
+                border-radius: 50%;
                 margin-left: 20px;
             }
         }
 
         .band-title {
-            color: #000;
+            color: #fff;
             padding: 35px 0px 15px 70px;
             text-align: center;
 
@@ -36,7 +35,7 @@
         justify-content: center;
         
         a {
-            color: #000;
+            color: #fff;
             text-align: center;
             width: 100px;
             display: block;
@@ -48,21 +47,25 @@
 
         .twitter {
             &:hover{
+                color: #000;
                 background: #1da1f2;
             }
         }
         .youtube {
             &:hover{
+                color: #000;
                 background: #ff0000;
             }
         }
         .instagram {
             &:hover{
+                color: #000;
                 background: #f77737;
             }
         }
         .spotify {
             &:hover{
+                color: #000;
                 background: #1db954;
             }
         }

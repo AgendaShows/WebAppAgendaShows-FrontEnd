@@ -1,12 +1,12 @@
 import React from 'react';
-import Image from './images/Firsttoeleven.jpg'
+import ProfilePicture from './images/Firsttoeleven.jpg'
 
 function ProfileCard() {
     return (
         <div className="band-name">
             <div class="row">
                 <div class="col-3 band-image">
-                    <img src={Image} alt="Foto de la banda" height="180px" width="180px"/>
+                    <img src={ProfilePicture} alt="Foto de la banda" height="180px" width="180px"/>
                 </div>
                 <div class="col-9 band-title">
                     <h2>First To Eleven</h2> 

@@ -12,15 +12,34 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 //* Components
 import LandingPage from './pages/LandingPage/LandingPage';
-import Register from './pages/RegisterPage/Register';
+import RegisterPage from './pages/RegisterPage/Register';
+import HomePage from './pages/HomePage/HomePage';
+import BandPage from './pages/BandPage/BandPage';
+import Filter from './pages/StaticsPage/Filter';
+import Recomended from './pages/StaticsPage/Recomended';
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
+          <Route path="/recomendados">
+            <Recomended />
+          </Route>
+          <Route path="/filtros">
+            <Filter />
+          </Route>
+          <Route path="/firsttoeleven">
+            <BandPage />
+          </Route>
+          <Route path="/publico">
+            <HomePage />
+          </Route>
+          <Route path="/home">
+            <HomePage />
+          </Route>
           <Route path="/registro">
-            <Register />
+            <RegisterPage />
           </Route>
           <Route path="/">
             <LandingPage />

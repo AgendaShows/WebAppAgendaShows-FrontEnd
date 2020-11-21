@@ -1,27 +1,25 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function SearchBar() {
     return (
         <div>
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0 lista">
                 <li class="nav-item">
-                    <a class="btn btn-outline-light" href="https://google.com">Inicio</a>
+                    <Link class="btn btn-outline-light" to="/home">Inicio</Link>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-light" href="https://google.com">Artistas</a>
+                    <Link class="btn btn-outline-light" to="/firsttoeleven">Artistas</Link>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-light" href="https://google.com">Eventos</a>
+                    <Link class="btn btn-outline-light" to="/filtros">Filtrar</Link>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-light" href="https://google.com">Filtrar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-light" href="https://google.com">Recomendados</a>
+                    <Link class="btn btn-outline-light" to="/recomendados">Recomendados</Link>
                 </li>
             </ul>
         </div>
     )
-}
+};
 
 export default SearchBar;

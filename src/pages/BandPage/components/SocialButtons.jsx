@@ -1,15 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 function SocialButtons() {
     return (
         <div className="social-links">
-            <Link to="" className="twitter" target="_blank"><i class="fa fa-twitter"></i></Link>
-            <Link to="" className="youtube" target="_blank"><i class="fa fa-youtube"></i></Link>
-            <Link to="" className="instagram" target="_blank"><i class="fa fa-instagram"></i></Link>
-            <Link to="" className="spotify" target="_blank"><i class="fa fa-spotify"></i></Link>
+            <a href="https://twitter.com/firsttoeleven?lang=es" className="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCcE10s4MFy4eed7q7QkonZg" className="youtube"><i class="fa fa-youtube"></i></a>
+            <a href="https://www.instagram.com/firsttoeleven/?hl=es" className="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/3Cpk1xlScqbYhmv5EqoI4Y" className="spotify"><i class="fa fa-spotify"></i></a>
         </div>
     )
-}
+};
 
 export default SocialButtons;
