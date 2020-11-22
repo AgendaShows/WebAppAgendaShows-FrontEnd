@@ -4,11 +4,11 @@ import ProfilePicture from './images/Firsttoeleven.jpg'
 function ProfileCard() {
     return (
         <div className="band-name">
-            <div class="row">
-                <div class="col-3 band-image">
+            <div className="row">
+                <div className="col-3 band-image">
                     <img src={ProfilePicture} alt="Foto de la banda" height="180px" width="180px"/>
                 </div>
-                <div class="col-9 band-title">
+                <div className="col-9 band-title">
                     <h2>First To Eleven</h2> 
                     <br/>
                     <h4>Rock Internacional</h4>

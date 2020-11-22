@@ -14,14 +14,14 @@ function Form() {
     const [isRegister, setIsRegister] = useState(false);
 
     const handleInputChange = (e) => {
-        const { id, value } = e.target
+        const { name, value } = e.target
         setState(prevState => ({
             ...prevState,
-            [id] : value
+            [name] : value
         }));
     }
 
-    const handleClick = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         await createUsersApi(userData);
@@ -32,11 +32,11 @@ function Form() {
         <>
             {isRegister && <Redirect to="/" />}
             <div className="form-container">
-                <form>
+                <form onClick={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="text" className="etiqueta">Nombre</label>
                         <input type="text" 
-                            id="nombre" 
+                            name="nombre" 
                             className="form-control" 
                             aria-describedby="emailHelp" 
                             placeholder="Ingresa tu Nombre"
@@ -46,7 +46,7 @@ function Form() {
                     <div className="form-group">
                         <label htmlFor="text" className="etiqueta">Apellido</label>
                         <input type="text" 
-                            id="apellido" 
+                            name="apellido" 
                             className="form-control" 
                             aria-describedby="emailHelp" 
                             placeholder="Ingresa tu Apellido"
@@ -56,7 +56,7 @@ function Form() {
                     <div className="form-group">
                             <label htmlFor="email" className="etiqueta">E-Mail</label>
                             <input type="email" 
-                                id="email" 
+                                name="email" 
                                 className="form-control" 
                                 aria-describedby="emailHelp" 
                                 placeholder="Ingresa tu Email"
@@ -66,7 +66,7 @@ function Form() {
                     <div className="form-group">
                             <label htmlFor="password" className="etiqueta">Contraseña</label>
                             <input type="password" 
-                                id="password" 
+                                name="password" 
                                 className="form-control" 
                                 placeholder="Contraseña"
                                 value={userData.password} 
@@ -88,8 +88,7 @@ function Form() {
                     <br/>
                     <button type="submit" 
                         id="registrate" 
-                        className="btn btn-block btn-success"
-                        onClick={handleClick}>
+                        className="btn btn-block btn-success">
                             Registrarse
                         </button>
                 </form>

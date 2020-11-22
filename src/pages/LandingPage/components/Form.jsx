@@ -54,9 +54,9 @@ function Form() {
                     type="submit" 
                     className="btn btn-primary"
                     onClick={handleClick}>Inicia Sesion</Link>
-                <Link to="/publico" 
+                <Link to="/invitado" 
                     type="submit"
-                    className="btn btn-success no-login-btn">Iniciar sin Registrarse</Link>
+                    className="btn btn-success no-login-btn">Iniciar como Invitado</Link>
             </form>
         </>
     )

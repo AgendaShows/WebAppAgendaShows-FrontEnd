@@ -17,9 +17,9 @@ function Recomended() {
                     <img src={Tool} alt="Rueda giratoria"></img>
                 </div>
                 <div className="ad">
-                    <i class="fas fa-fire"/>
+                    <i className="fas fa-fire"/>
                     <p className="text"><strong>Proximamente</strong></p>
-                    <i class="fas fa-fire"/>
+                    <i className="fas fa-fire"/>
                 </div>
             </div>
             <Footer />

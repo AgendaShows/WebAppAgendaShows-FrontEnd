@@ -33,7 +33,7 @@ function App() {
           <Route exact path="/firsttoeleven">
             <BandPage />
           </Route>
-          <Route exact path="/publico">
+          <Route exact path="/invitado">
             <HomePage />
           </Route>
           <Route exact path="/inicio">

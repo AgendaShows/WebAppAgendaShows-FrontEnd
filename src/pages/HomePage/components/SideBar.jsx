@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image from './profilePicture.jpg'
 import Mapa from './Mapa.jpg'
+
 function SideBar (){
     return (
         <>
@@ -16,11 +18,11 @@ function SideBar (){
             <div className="dropdown">
                 <button className="btn btn-info dropdown-toggle" data-toggle="dropdown">Mi Menu</button>
                 <div className="dropdown-menu">
-                    {/* <a className="dropdown-item"><li>Mi cuenta</li></a>
-                    <a className="dropdown-item"><li>Explorar</li></a>
-                    <a className="dropdown-item"><li>Mis Conciertos</li></a>
-                    <a className="dropdown-item"><li>Cerrar Sesion</li></a>
-                    <a className="dropdown-item"><li>Opciones</li></a> */}
+                    <Link to="" className="dropdown-item"><li>Mi cuenta</li></Link >
+                    <Link to="" className="dropdown-item"><li>Explorar</li></Link >
+                    <Link to="" className="dropdown-item"><li>Mis Conciertos</li></Link >
+                    <Link to="" className="dropdown-item"><li>Cerrar Sesion</li></Link >
+                    <Link to="" className="dropdown-item"><li>Opciones</li></Link >
                 </div>
             </div>
             <img src={Mapa} alt="MAPA" className="map"/>

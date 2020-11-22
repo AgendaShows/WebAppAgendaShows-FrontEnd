@@ -3,20 +3,20 @@ import React from 'react';
 function Icons() {
     return (
         <div className="social-icons">
-            <a href="https://facebook.com" class="btn btn-outline-light">
-                <i class="fab fa-facebook-f"></i>
+            <a href="https://facebook.com" className="btn btn-outline-light">
+                <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/" class="btn btn-outline-light">
-                <i class="fab fa-instagram"></i>
+            <a href="https://instagram.com/" className="btn btn-outline-light">
+                <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://twitter.com/" class="btn btn-outline-light">
-                <i class="fab fa-twitter"></i>
+            <a href="https://twitter.com/" className="btn btn-outline-light">
+                <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://www.spotify.com" class="btn btn-outline-light">
-                <i class="fab fa-spotify"></i>
+            <a href="https://www.spotify.com" className="btn btn-outline-light">
+                <i className="fab fa-spotify"></i>
             </a>
-            <a href="https://youtube.com/" class="btn btn-outline-light">
-                <i class="fab fa-youtube"></i>
+            <a href="https://youtube.com/" className="btn btn-outline-light">
+                <i className="fab fa-youtube"></i>
             </a>
         </div>
     )

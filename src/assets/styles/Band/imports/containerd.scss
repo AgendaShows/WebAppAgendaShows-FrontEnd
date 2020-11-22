@@ -38,5 +38,8 @@
 
     .div-carousel {
         margin: 30px auto;
+        .carousel-inner {
+            height: 350px;
+        }
     }
 }
