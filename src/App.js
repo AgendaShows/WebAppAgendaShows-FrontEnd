@@ -15,6 +15,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import LandingPage from './pages/LandingPage/LandingPage';
 import RegisterPage from './pages/RegisterPage/Register';
 import HomePage from './pages/HomePage/HomePage';
+import ShowPage from './pages/ShowPage/ShowPage';
 import BandPage from './pages/BandPage/BandPage';
 import Filter from './pages/StaticsPage/Filter';
 import Recomended from './pages/StaticsPage/Recomended';
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route exact path="/firsttoeleven">
             <BandPage />
+          </Route>
+          <Route exact path="/fullRecital">
+            <ShowPage />
           </Route>
           <Route exact path="/invitado">
             <HomePage />

@@ -1,13 +1,14 @@
 import React from 'react';
-import SmallLogo from "./bandLogo.jpg";
 
-function SmallCard (){
+function SmallCard (props){
+
+    const { imagen, nombre, genero } = props
+
     return (
         <div className="bands smallCard">
-            <img src={SmallLogo} className="imagen" alt="banda" height="120px" width="120px"/>
-            {/* <i class="fas fa-search-dollar"></i> */}
-            <h6>Banda 2</h6>
-            <span>Genero Musical</span>
+            <img src={imagen} className="imagen" alt="banda" height="120px" width="120px"/>
+            <h6> {nombre} </h6>
+            <span> {genero} </span>
         </div>
     )
 };

@@ -1,12 +1,16 @@
 import React from 'react';
-import LogoBanda from './bandLogo.jpg'
-function PerfilBanda() {
+
+function PerfilBanda(props) {
+
+    const { imagen, nombre, genero } = props
+
     return (
         <div className="perfil">
-            <img src={LogoBanda} alt="fotoBanda"/> 
-            <h5>METALLICA</h5>
-            <h6>HEAVY METAL</h6>
+            <img src={imagen} alt="fotoBanda"/> 
+            <h5> {nombre} </h5>
+            <h6> {genero} </h6>
         </div>
     )
 }
+
 export default PerfilBanda;

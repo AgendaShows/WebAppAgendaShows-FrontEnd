@@ -1,21 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './bandLogo.jpg';
 
-function RecitalCard () {
+function RecitalCard (props) {
+
+    const {nombreBanda, titulo, imagen, descripcion, id} = props;
+    const urlParam = `/fullRecital/${id}`
 
     return(
         <div className="row">
             <div className="col-12 col-lg-4 cardsProfile">
-                <img src={Logo} className="fotoBanda" alt="banda" height="100px" width="100px"/>
-                <h4>NombreBanda</h4>
-                <p>Categoría</p>
+                <img src={imagen} className="fotoBanda" alt="banda" height="100px" width="100px"/>
+                <h4>{nombreBanda}</h4>
+                <p>{titulo}</p>
             </div>
             <div className="col-12 col-lg-8 cardsRecitales">
-                <textarea name="descripcion" className="descripcion" placeholder="Descripcion"></textarea>
+                <textarea name="descripcion" className="descripcion" placeholder="Descripcion">
+                    {descripcion}
+                </textarea>
                 <div className="row">
                     <div className="col-12 buttonCards">
-                        <Link to="" className="btn btn-outline-warning btn-block">VER MÁS</Link>
+                        <Link to="/fullRecital" className="btn btn-outline-warning btn-block">VER MÁS</Link>
                     </div>
                 </div>
             </div>   

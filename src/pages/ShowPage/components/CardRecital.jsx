@@ -1,9 +1,12 @@
 import React from 'react';
-import ImgRecital from './Metallica.jpg'
-function CardRecital() {
+
+function CardRecital(props) {
+
+    const { imagen } = props
+
     return (
         <div className="contenedorImagen">
-           <img src={ImgRecital} alt="FotoRecital"/>
+           <img src={imagen} alt="FotoRecital"/>
         </div>
     )
 }

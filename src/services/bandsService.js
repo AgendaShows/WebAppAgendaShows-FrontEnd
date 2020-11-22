@@ -1,6 +1,6 @@
-export const getRecitalByFechaApi = async () => {
+export const getBandasApi = async () => {
 
-    const URL = "http://localhost:5000/api/obtenerRecitalPorFecha";
+    const URL = "http://localhost:5000/api/obtenerBandas";
 
     try {
         const response = await fetch(URL);
@@ -11,27 +11,25 @@ export const getRecitalByFechaApi = async () => {
         } else {
             throw new Error("Error al obtener la informacion")
         }
-
     } catch (error) {
         console.error("A ocurrido un error", error); 
     }
 };
 
-export const getFullRecitalApi = async () => {
+export const getBandaApi = async () => {
 
-    const URI = "http://localhost:5000/api/obtenerFullRecital/:id";
+    const URL = "http://localhost:5000/api/obtenerBanda/5fa7a642e0c8a928ec0d3fc2";
 
     try {
-        const response = await fetch(URI);
+        const response = await fetch(URL);
 
         if (response.ok) {
-            const fullRecital = await response.json()
-            return fullRecital;
+            const recital = await response.json();
+            return recital;
         } else {
             throw new Error("Error al obtener la informacion")
         }
-
     } catch (error) {
         console.error("A ocurrido un error", error); 
     }
-};
+}

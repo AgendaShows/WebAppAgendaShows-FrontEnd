@@ -1,12 +1,14 @@
 import React from 'react';
-import BigLogo from './bandLogo.jpg'
-function BigCard (){
+
+function BigCard (props){
+
+    const { image, name, genre } = props
+
     return (
         <div className="bands bigCard">
-            <img src={BigLogo} className="imagen" alt="banda" height="120px" width="120px"/>
-            {/* <i class="fas fa-search-dollar"></i> */}
-            <h6>Banda Grande</h6>
-            <span>Genero Musical</span>
+            <img src={image} className="imagen" alt="banda" height="120px" width="120px"/>
+            <h6> {name} </h6>
+            <span> {genre} </span>
         </div>
     )
 };

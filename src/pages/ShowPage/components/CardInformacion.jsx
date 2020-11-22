@@ -1,10 +1,12 @@
 import React from 'react';
 
-function CardInformacion() {
-    return (
-        
+function CardInformacion(props) {
+
+    const { descripcion } = props
+
+    return ( 
         <div className="informacion">
-            <textarea>Descripción</textarea>
+            <textarea> {descripcion} </textarea>
         </div>
     )
 }
