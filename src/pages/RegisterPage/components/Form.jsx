@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {createUsersApi} from '../../../services/userService';
 import {Redirect} from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 function Form() {
 
@@ -21,18 +22,33 @@ function Form() {
         }));
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        await createUsersApi(userData);
-        setIsRegister(true);
+        if (!userData.nombre && !userData.apellido && !userData.email && !userData.password) {
+            Swal.fire({
+                title: "Debe completar todos los campos",
+                text: "Verifique la informacion ingresada",
+                icon: "error",
+                timer: 1500
+            }); 
+        } else {
+            Swal.fire({
+                title: "Registro exitoso!",
+                text: "Ya puede iniciar sesion",
+                icon: "success",
+                timer: 1500
+            })
+            createUsersApi(userData);
+            setIsRegister(true);
+        }
     }
 
     return (
         <>
             {isRegister && <Redirect to="/" />}
             <div className="form-container">
-                <form onClick={handleSubmit}>
+                <form>
                     <div className="form-group">
                         <label htmlFor="text" className="etiqueta">Nombre</label>
                         <input type="text" 
@@ -88,7 +104,8 @@ function Form() {
                     <br/>
                     <button type="submit" 
                         id="registrate" 
-                        className="btn btn-block btn-success">
+                        className="btn btn-block btn-success"
+                        onClick={handleSubmit}>
                             Registrarse
                         </button>
                 </form>

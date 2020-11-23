@@ -19,7 +19,7 @@ function RecitalCard (props) {
                 </textarea>
                 <div className="row">
                     <div className="col-12 buttonCards">
-                        <Link to="/fullRecital" className="btn btn-outline-warning btn-block">VER MÁS</Link>
+                        <Link to={urlParam} className="btn btn-outline-warning btn-block">VER MÁS</Link>
                     </div>
                 </div>
             </div>   

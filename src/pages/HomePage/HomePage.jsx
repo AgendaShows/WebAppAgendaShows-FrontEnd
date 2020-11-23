@@ -21,16 +21,13 @@ function HomePage() {
 
   const [ showsData, setShowsData ] = useState([]);
   const [ bandsData, setBandsData ] = useState([]);
-  //const [ destacadoData, setDestacadoData ] = useState([]);
+  const [ destacadosData, setDestacadosData ] = useState([]);
 
   useEffect(() => {
     getRecitalByFechaApi().then(showData => setShowsData(showData));
     getBandasApi().then(bandData => setBandsData(bandData));
-    //getBandaApi().then(desvanData => setDestacadoData(desvanData));
+    getBandaApi().then(descatadoData => setDestacadosData(descatadoData));
   }, []);
-
-  //! Revisar map de componente BigCard, mensaje: cannot read property 'map' of null.
-  //! Lograr hacer match del ID del back con lo que llega al button. 
 
   return (
     <>
@@ -55,15 +52,13 @@ function HomePage() {
             </div>
             <div className="col-12 col-lg-4 aside">
               <BannerDestacados />
-              {/* {destacadoData.map(element => (
                 <div className="row">
                   <div className="col-12">
-                    <BigCard image={element.imgBanda}
-                      name={element.nombre}
-                      genre={element.genero}/>
+                    <BigCard imagen={destacadosData.imgBanda}
+                      nombre={destacadosData.nombre}
+                      genero={destacadosData.genero}/>
                   </div>
-                </div>
-              ))} */}
+              </div>
               <div className="row">
               {bandsData.map(item => (
                 <div className="col-12 col-lg-6">

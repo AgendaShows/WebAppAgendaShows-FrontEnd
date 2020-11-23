@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import {loginUserApi} from '../../../services/userService';
+import Swal from 'sweetalert2'
 
 function Form() {
 
@@ -19,11 +20,26 @@ function Form() {
         }));
     }
 
-    const handleClick = async (e) => {
+    const handleClick = (e) => {
         e.preventDefault();
 
-        await loginUserApi(userCredentials);
-        setIsLogged(true);
+        if (!userCredentials.email && !userCredentials.email) {
+            Swal.fire({
+                title: "Ups! No pudimos identificarte",
+                text: "Verifica tus credenciales",
+                icon: "error",
+                timer: 1500
+            }); 
+        } else {
+            Swal.fire({
+                title: "Bienvenido!",
+                text: `${userCredentials.email}`,
+                icon: "success",
+                timer: 1500
+            });
+            loginUserApi(userCredentials);
+            setIsLogged(true);
+        }
     }
 
     return (
