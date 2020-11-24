@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'
 
 //* Styles
 import '../../assets/styles/Show/show.scss';
@@ -12,45 +13,55 @@ import Buttons from "./components/Buttons";
 import Footer from "../Footer/Footer";
 
 //* Services
-import { getFullRecitalApi } from '../../services/showService';
+//import { getFullRecitalApi } from '../../services/showService';
 
 function ShowPage () {
+
+    const { id } = useParams();
+    console.log(id);
 
     const [ recitalData, setRecitalData ] = useState([]);
 
     useEffect(() => {
-        getFullRecitalApi().then(fullData => setRecitalData(fullData));
+        obtenerRecital();
       }, []);
-  
+
+      const obtenerRecital = async () => {
+          const data = await fetch(`http://localhost:5000/api/obtenerFullRecital/${id}`);
+          const fullRecital = await data.json()
+          setRecitalData(fullRecital)
+      }
+      console.log(setRecitalData);
+      
     return (
         <>
             <Header/>
                 <div className="container-fluid">
                     <div className="row">
-                        {recitalData.map(item => (
+
                             <div className="col-12 col-lg-10">
-                                <CardRecital imagen={item.imgBanda}/>
+                                <CardRecital imagen={recitalData.bannerRecital}/>
                             </div>
-                        ))}
+
                         <div className="col-12 col-lg-8 contenedorInformacion">
-                            {recitalData.map(item => (
+
                                 <div className="row">
                                     <div className="col-12 col-lg-7">
-                                        <CardInformacion descripcion={item.descripcion}/> 
+                                        <CardInformacion descripcion={recitalData.descripcion}/> 
                                     </div>
                                     <div className="col-12 col-lg-3">
-                                        <PerfilBanda imagen={item.imgBanda}
-                                            nombre={item.nombre}
-                                            genero={item.genero}/>
+                                        <PerfilBanda imagen={recitalData.imgBanda}
+                                            nombre={recitalData.nombre}
+                                            genero={recitalData.genero}/>
                                     </div>
                                 </div>
-                            ))}
+
                         </div>
-                        {recitalData.map(item => (
+
                             <div className="col-12 col-lg-2">
-                                <Buttons links={item.linkEntradas}/>
+                                <Buttons links={recitalData.linkEntradas}/>
                             </div>
-                        ))}
+
                     </div>               
                 </div>
             <Footer/>
