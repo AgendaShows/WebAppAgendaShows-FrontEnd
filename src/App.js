@@ -25,6 +25,12 @@ function App() {
     <Router>
       <div>
         <Switch>
+          <Route exact path="/banda/:nombre/:id">
+            <BandPage />
+          </Route>
+          <Route exact path="/fullRecital/:id">
+            <ShowPage />
+          </Route>
           <Route exact path="/recomendados">
             <Recomended />
           </Route>
@@ -33,9 +39,6 @@ function App() {
           </Route>
           <Route exact path="/firsttoeleven">
             <BandPage />
-          </Route>
-          <Route exact path="/fullRecital">
-            <ShowPage />
           </Route>
           <Route exact path="/invitado">
             <HomePage />

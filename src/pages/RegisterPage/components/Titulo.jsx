@@ -9,4 +9,4 @@ function Titulo() {
     )
 }
 
-export default Titulo
+export default Titulo;

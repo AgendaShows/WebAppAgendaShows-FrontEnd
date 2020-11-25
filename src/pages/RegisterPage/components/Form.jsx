@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {createUsersApi} from '../../../services/userService';
-import {Redirect} from 'react-router-dom';
+import React, { useState } from 'react';
+import { createUsersApi } from '../../../services/userService';
+import { Redirect } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 function Form() {

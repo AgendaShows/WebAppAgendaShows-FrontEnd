@@ -1,10 +1,9 @@
 import React from 'react';
-import Picture1 from './images/First1-1.jpg';
-import Picture2 from './images/First2-1.jpg';
-import Picture3 from './images/First3-1.jpg';
-import Picture4 from './images/First4.jpg';
 
-function Carousel() {
+function Carousel(props) {
+
+    const { foto1, foto2, foto3, foto4 } = props
+
     return (
         <div className="div-carousel">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -16,16 +15,16 @@ function Carousel() {
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={Picture4} alt="First slide"/>
+                        <img className="d-block w-100" src={foto1} alt="First slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src={Picture3} alt="Second slide"/>
+                        <img className="d-block w-100" src={foto2} alt="Second slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src={Picture2} alt="Third slide"/>
+                        <img className="d-block w-100" src={foto3} alt="Third slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src={Picture1} alt="Third slide"/>
+                        <img className="d-block w-100" src={foto4} alt="Third slide"/>
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

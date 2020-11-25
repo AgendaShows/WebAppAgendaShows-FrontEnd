@@ -83,6 +83,7 @@
             border-left: 2px solid #000000; 
             border-bottom: 2px solid #000000;
             h4{
+                margin-top: 10px;
                 font-size: 1.3rem;
             }
 
@@ -99,15 +100,13 @@
             border-bottom-right-radius: 25px;
             border-top-right-radius: 25px;
             
-            textarea {
-                width: 300px;
-                min-height: 120px;
-                max-height: 120px;
-                border-radius: 10px;
-                .descripcion{
-                    width: 290px;  
-                }
+            .descripcion{
+                color: #fff;
+                margin-left: 10px;
+                text-align: center;
+                width: 290px;  
             }
+
             .buttonCards {
                 margin-top: 10px;
                 .buttonMas{
@@ -158,11 +157,6 @@
                 font-size: 20px;
                 margin-left: 70px;
             }
-            // i{
-            //     margin-left: 10px;
-            //     float: right;
-            //     font-size: 30px;
-            // }
             h6{
                 margin: 10px 0px;
                 font-size: 25px;

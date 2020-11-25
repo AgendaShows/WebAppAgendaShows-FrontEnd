@@ -1,6 +1,33 @@
 @media only screen and (max-width: 960px) { 
-    /* Section */
     .perfil {
         margin-left: 0 ;
+    }
+
+    .contenedorImagen {
+        margin: 20px auto;
+        width: 380px;
+
+        img {
+            height: 300px;
+            width: 320px;
+        }
+    }
+
+    .contenedorInformacion {
+        margin: 0 auto;
+
+        .informacion {
+            .div-informacion {
+                width: 340px;
+            }
+        }
+
+        .perfil {
+            margin-left: 100px;
+        }
+    }
+
+    .contenedorBotones {
+        margin: 0 auto;
     }
 }

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Link, Redirect} from 'react-router-dom';
-import {loginUserApi} from '../../../services/userService';
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import { loginUserApi } from '../../../services/userService';
 import Swal from 'sweetalert2'
 
 function Form() {
@@ -35,7 +35,7 @@ function Form() {
                 title: "Bienvenido!",
                 text: `${userCredentials.email}`,
                 icon: "success",
-                timer: 1500
+                timer: 2000
             });
             loginUserApi(userCredentials);
             setIsLogged(true);

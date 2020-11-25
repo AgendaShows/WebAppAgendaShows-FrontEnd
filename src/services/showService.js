@@ -19,7 +19,7 @@ export const getRecitalByFechaApi = async () => {
 
 export const getFullRecitalApi = async () => {
 
-    const URI = "http://localhost:5000/api/obtenerFullRecital/:id";
+    const URI = `http://localhost:5000/api/obtenerFullRecital/:id`;
 
     try {
         const response = await fetch(URI);

@@ -30,11 +30,19 @@
         padding: 20px;
         width: fit-content;
 
-        textarea{
+        .div-informacion{
+            padding: 15px;
+            color: #fff;
             width: 560px;
             height: 265px;
             border-radius: 2%;
             max-height: 500px;
+
+            .div-locacion {
+                margin: 7px auto;
+                padding: 15px;
+                text-align: center;
+            }
         }
     }
 
@@ -59,7 +67,6 @@
 }
 
 .contenedorBotones{
-    // border: 10px solid #201f1f;
     margin: 20px 0px 20px 20px;
     padding: 15px;
     border-radius: 15px;
@@ -72,5 +79,19 @@
        font-size: 20px;
        text-align: center;
        width:150px;
-   }
+    }
+
+    .link-button {
+        &:hover {
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: green;
+            &:hover {
+                color: #fff;
+            }
+            
+        }
+    }
 }
