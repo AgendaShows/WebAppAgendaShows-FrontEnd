@@ -16,12 +16,30 @@ export const getBandasApi = async () => {
     }
 };
 
-export const getBandaApi = async () => {
+export const getUnaBandaApi = async () => {
 
-    const URI = "http://localhost:5000/api/obtenerBanda/5fba03612575805df448e738";
+    const URI = "http://localhost:5000/api/obtenerBanda/5fb9441dac48ca16f821162b";
 
     try {
         const response = await fetch(URI);
+
+        if (response.ok) {
+            const unaBanda = await response.json();
+            return unaBanda;
+        } else {
+            throw new Error("Error al obtener la informacion")
+        }
+    } catch (error) {
+        console.error("A ocurrido un error", error); 
+    }
+}
+
+export const getBandaApi = async () => {
+
+    const url = "http://localhost:5000/api/obtenerBanda/:id";
+
+    try {
+        const response = await fetch(url);
 
         if (response.ok) {
             const banda = await response.json();

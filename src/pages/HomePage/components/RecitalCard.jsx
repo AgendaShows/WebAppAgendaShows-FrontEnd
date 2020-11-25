@@ -14,9 +14,9 @@ function RecitalCard (props) {
                 <p>{titulo}</p>
             </div>
             <div className="col-12 col-lg-8 cardsRecitales">
-                <textarea name="descripcion" className="descripcion" placeholder="Descripcion">
+                <div name="descripcion" className="descripcion">
                     {descripcion}
-                </textarea>
+                </div>
                 <div className="row">
                     <div className="col-12 buttonCards">
                         <Link to={urlParam} className="btn btn-outline-warning btn-block">VER MÁS</Link>

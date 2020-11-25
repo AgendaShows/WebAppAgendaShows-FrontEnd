@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 //*Styles
 import "../../assets/styles/Home/home.scss";
-import Footer from "../Footer/Footer";
 
 //* Components
 import Header from "../Header/Header";
@@ -12,10 +11,11 @@ import BigCard from "./components/BigCard";
 import FechasButtons from "./components/FechasButtons";
 import SideBar from "./components/SideBar";
 import SmallCard from "./components/SmallCard";
+import Footer from "../Footer/Footer";
 
 //* Services
 import { getRecitalByFechaApi } from '../../services/showService';
-import { getBandasApi, getBandaApi } from '../../services/bandsService';
+import { getBandasApi, getUnaBandaApi } from '../../services/bandsService';
 
 function HomePage() {
 
@@ -26,7 +26,7 @@ function HomePage() {
   useEffect(() => {
     getRecitalByFechaApi().then(showData => setShowsData(showData));
     getBandasApi().then(bandData => setBandsData(bandData));
-    getBandaApi().then(descatadoData => setDestacadosData(descatadoData));
+    getUnaBandaApi().then(descatadoData => setDestacadosData(descatadoData));
   }, []);
 
   return (
@@ -64,7 +64,8 @@ function HomePage() {
                 <div className="col-12 col-lg-6">
                   <SmallCard imagen={item.imgBanda}
                     nombre={item.nombre}
-                    genero={item.genero}/>
+                    genero={item.genero}
+                    id={item._id}/>
                 </div>
               ))}
               </div>

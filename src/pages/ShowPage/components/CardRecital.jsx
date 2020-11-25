@@ -6,7 +6,7 @@ function CardRecital(props) {
 
     return (
         <div className="contenedorImagen">
-           <img src={imagen} alt="FotoRecital"/>
+           <img src={imagen} alt="FotoRecital" className="img-fluid"/>
         </div>
     )
 }

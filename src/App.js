@@ -25,6 +25,9 @@ function App() {
     <Router>
       <div>
         <Switch>
+          <Route exact path="/banda/:nombre/:id">
+            <BandPage />
+          </Route>
           <Route exact path="/fullRecital/:id">
             <ShowPage />
           </Route>
